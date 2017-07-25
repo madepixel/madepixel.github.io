@@ -7,14 +7,14 @@
   <meta charset="utf-8">
 <style>
 
-/* Non-essential Styles */ h2 { margin:0; margin-top:20px; font-size:1.1em; font-style:italic; } h3 { margin:0; font-size:1em; } .float-divider { clear:both; display:block; height:1px; font-size:1px; line-height:1px; } .container { width:125px; height:60px; float:left; position:relative; margin-right:75px; border:1px solid black; } .before,.oi { background-color:gold; } /* Essential Styles */ .before { width:100%; margin:5px; padding:5px; border:5px solid black; } .after { width:100%; } .after .oi { margin:5px; padding:5px; border:5px solid black; display:block; } .float { float:left; } .absolute { position:absolute; } .static { position:static; }
+*.box { border:1px solid black; background-color:gold; } *.sized { width:100px; height:35px; position:absolute; } *.static-inline-shrinkwrapped { width:auto; } *.replaced-inline-shrinkwrapped { width:auto; } *.replaced-inline-sized { width:35px; } *.replaced-inline-stretched { width:100%; height:100%; } *.static-block-sized { width:300px; } *.static-block-stretched { width:auto; } *.table-shrinkwrapped { width:auto; } *.table-sized { width:300px; } *.table-stretched { width:100%; } *.float-shrinkwrapped { width:auto; float:left; } *.float-sized { width:300px; float:left; clear:both; } *.float-stretched { width:100%; float:left; clear:both; } *.absolute-shrinkwrapped { width:auto; left:0; right:auto; position:absolute; top:370px; } *.absolute-sized { width:300px; left:0; right:auto; position:absolute; top:394px; } *.absolute-stretched { width:auto; left:0; right:0; position:absolute; top:418px; }
 
 </style>
 </head>
 
 <body>
 
-<h2>Before</h2> <div class="container"> <div class="before float"> 플로트 띄움 </div> </div> <div class="container"> <span class="before absolute"> 절대 배치 </span> </div> <div class="container"> <div class="before static"> 정적 배치 </div> </div> <div class="float-divider"></div> <h2>After</h2> <div class="container"> <div class="after float"> <div class="oi"> 플로트 띄움 </div> </div> </div> <div class="container"> <span class="after absolute"><span class="oi"> 절대 배치 </span></span> </div> <div class="container"> <div class="after static"> <div class="oi"> 정적 배치 </div> </div> </div>
+<span class="static-inline-shrinkwrapped box">정적, 인라인, 자동 축소<br>요소</span> <img class="replaced-inline-shrinkwrapped box" src="star.png" alt=""> <img class="replaced-inline-sized box" src="star.png" alt=""> <span class="sized"> <img class="replaced-inline-stretched box" src="star.png" alt=""> </span> <div class="static-block-sized box">정적, 블록, 지정 크기</div> <div class="static-block-stretched box">정적, 블록, 자동 확대, auto</div> <table class="table-shrinkwrapped box"><tbody><tr><td>테이블, 자동 축소</td></tr></tbody></table> <table class="table-sized box"><tbody><tr><td>테이블, 지정 크기</td></tr></tbody></table> <table class="table-stretched box"><tbody><tr><td>테이블, 자동 확대, 100%</td></tr></tbody></table> <span class="float-shrinkwrapped box">플로트, 자동 축소</span> <span class="float-sized box">플로트, 지정 크기</span> <span class="float-stretched box">플로트, 자동 확대, 100%</span> <span class="absolute-shrinkwrapped box">절대, 자동 축소</span> <span class="absolute-sized box">절대, 지정 크기</span> <span class="absolute-stretched box">절대, 자동 확대, auto</span>
 
 
 </body>
